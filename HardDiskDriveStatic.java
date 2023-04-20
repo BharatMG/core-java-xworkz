@@ -1,11 +1,13 @@
-class HardDiskDrive{
+class HardDiskDriveStatic{
+
+static String brandName = "WD elements";
+static String capacity = "1TB" ;
+static String type = "HDD";
+static String color = " dark black";
+static String connectivity = "USB 3.0 & 2.O";
+static int price = 4219;
+
 public static void main(String drive[]){
-String brandName = "WD elements";
-String capacity = "1TB" ;
-String type = "HDD";
-String color = " dark black";
-String connectivity = "USB 3.0 & 2.O";
-int price = 4219;
 System.out.println(" brand name is "+ brandName);
 System.out.println("capacity is "+ capacity);
 System.out.println("type is "+ type );

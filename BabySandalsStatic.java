@@ -1,11 +1,12 @@
-class BabySandals{
+class BabySandalsStatic{
+static String brandName = "neobaby";
+static String size = "7c";
+static String color = "purple green";
+static String type = "clogs";
+static String styleCode = "CLOG-7";
+static int price = 249;
+
 public static void main(String b[]){
-String brandName = "neobaby";
-String size = "7c";
-String color = "purple green";
-String type = "clogs";
-String styleCode = "CLOG-7";
-int price = 249;
 System.out.println("baby sandals brand name "+ brandName);
 System.out.println("size is "+ size);
 System.out.println("color is "+ color);

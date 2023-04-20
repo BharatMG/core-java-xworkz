@@ -1,11 +1,12 @@
-class Bike{
+class BikeStatic{
+static String brandName = "hero xpulse";
+static int numberOfCylinder = 1;
+static String suspension = "teliscope";
+static String frameType = "diamond";
+static String tankCapacity = "13L";
+static int price = 137496;
 public static void main(String bike[]){
-String brandName = "hero xpulse";
-int numberOfCylinder = 1;
-String suspension = "teliscope";
-String frameType = "diamond";
-String tankCapacity = "13L";
-int price = 137496;
+
 System.out.println("bike brand is "+ brandName);
 System.out.println(" Number Of Cylinder is "+ numberOfCylinder);
 System.out.println(" suspension is "+ suspension);

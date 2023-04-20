@@ -1,11 +1,12 @@
-class MosquitoNet{
+class MosquitoNetStatic{
+static String brandName = "KEEPWELL";
+static String type = "frame hung" ;
+static String netMaterial = "fiber";
+static String color = "black";
+static String suitableFor = "window";
+static int price = 539;
 public static void main(String net[]){
-String brandName = "KEEPWELL";
-String type = "frame hung" ;
-String netMaterial = "fiber";
-String color = "black";
-String suitableFor = "window";
-int price = 539;
+
 System.out.println(" brand name is "+ brandName);
 System.out.println("type is  "+ type);
 System.out.println("net material is "+ netMaterial );

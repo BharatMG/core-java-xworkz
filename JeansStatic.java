@@ -1,11 +1,12 @@
-class Jeans {
+class JeansStatic {
+static String brandName = "veirdo";
+static int size = 32;
+static String faded = "light fade";
+static String color = " dark black";
+static String idealFor = "men";
+static int price = 1499;
 public static void main(String jeans[]){
-String brandName = "veirdo";
-int size = 32;
-String faded = "light fade";
-String color = " dark black";
-String idealFor = "men";
-int price = 1499;
+
 System.out.println("jeans brand name is "+ brandName);
 System.out.println("jeans size is "+ size);
 System.out.println("faded is "+ faded );

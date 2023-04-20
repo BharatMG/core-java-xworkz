@@ -1,10 +1,11 @@
-class SyntheticEngineOil{
+class SyntheticEngineOilStatic{
+static String brandName = "castrol";
+static String quantity = "3L";
+static String suitableFor = "petroil diesel engines";
+static double weight = 2.8;
+static int price =1604;
 public static void main(String oil[])  {
-String brandName = "castrol";
-String quantity = "3L";
-String suitableFor = "petroil diesel engines";
-double weight = 2.8;
-int price =1604;
+
 System.out.println("synthetic engine oil brand name "+ brandName);
 System.out.println("quantity is "+ quantity);
 System.out.println("oil suitable for "+ suitableFor);

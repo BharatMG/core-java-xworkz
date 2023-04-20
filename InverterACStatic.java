@@ -1,11 +1,13 @@
-class InverterAC{
+class InverterACStatic{
+
+static String brandName = "candy";
+static String capacity = "1.5 ton";
+static String rating = "3 star";
+static String color = "white";
+static String condenserCoil = "copper";
+static int price = 31990;
+
 public static void main(String ac[]){
-String brandName = "candy";
-String capacity = "1.5 ton";
-String rating = "3 star";
-String color = "white";
-String condenserCoil = "copper";
-int price = 31990;
 System.out.println("inverter ac brand nameis "+ brandName);
 System.out.println("ac capacityis "+ capacity);
 System.out.println("rating is "+ rating);

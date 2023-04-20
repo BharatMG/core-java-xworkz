@@ -1,11 +1,12 @@
-class CookwareSet{
+class CookwareSetStatic{
+static String brandName = "prestige";
+static String madeOf  = "alluminium" ;
+static String coating = "non-stick";
+static String color = " dark black";
+static String warranty = "1 year";
+static int price = 1899;
 public static void main(String set[]){
-String brandName = "prestige";
-String madeOf  = "alluminium" ;
-String coating = "non-stick";
-String color = " dark black";
-String  warranty = "1 year";
-int price = 1899;
+
 System.out.println(" brand name is "+ brandName);
 System.out.println("made of "+ madeOf);
 System.out.println("coating is "+ coating );

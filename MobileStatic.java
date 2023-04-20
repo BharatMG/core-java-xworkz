@@ -1,11 +1,12 @@
-class Mobile{
+class MobileStatic{
+
+static String brandName = "realme";
+static String processor = "qualcomm snapdragon";
+static String realCamera = "108MP+2MP";
+static String battery = "5000 mAh";
+static int price = 18049;
+static String ram = "6GB";
 public static void main(String a[]){
-String brandName = "realme";
-String processor = "qualcomm snapdragon";
-String realCamera = "108MP+2MP";
-String battery = "5000 mAh";
-int price = 18049;
-String ram = "6GB";
 System.out.println("mobile brand name " + brandName);
 System.out.println("mobile processor " + processor);
 System.out.println("mobile real camera " + realCamera);

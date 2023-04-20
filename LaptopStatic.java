@@ -1,11 +1,13 @@
-class Laptop{
+class LaptopStatic{
+
+static String brandName = "lenovo";
+static String processorBrand = "intel" ;
+static String processorName = "core i5";
+static String color = " dark black";
+static String ramType = "ddr4";
+static int price = 55999;
+
 public static void main(String laptop[]){
-String brandName = "lenovo";
-String processorBrand = "intel" ;
-String processorName = "core i5";
-String color = " dark black";
-String ramType = "ddr4";
-int price = 55999;
 System.out.println("laptop brand name is "+ brandName);
 System.out.println("processor brand is "+ processorBrand);
 System.out.println("processor name is "+ processorName );

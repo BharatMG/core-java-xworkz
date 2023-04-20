@@ -1,11 +1,11 @@
-class FormalBlazer{
+class FormalBlazerStatic{
+static String brandName = "Raymond";
+static String idealFor = "men";
+static String color = "dark blue";
+static String fabric = "polystester";
+static String type = "single breasted";
+static int price = 3359;
 public static void main(String blazer[]){
-String brandName = "Raymond";
-String idealFor = "men";
-String color = "dark blue";
-String fabric = "polystester";
-String type = "single breasted";
-int price = 3359;
 System.out.println("blazer brand name is "+ brandName);
 System.out.println("ideal for "+ idealFor);
 System.out.println("color is "+ color);
