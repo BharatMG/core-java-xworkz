@@ -10,7 +10,5 @@ System.out.println("list of doctor names:");
 for(int i=0;i<doctorName.length ; i++){
 System.out.println(doctorName[i]);
 }
-
 }
-
 }

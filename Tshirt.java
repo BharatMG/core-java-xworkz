@@ -10,7 +10,5 @@ System.out.println("list of T-shirts names:");
 for(int i=0;i<brands.length ; i++){
 System.out.println(brands[i]);
 }
-
 }
-
 }

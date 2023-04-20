@@ -7,15 +7,8 @@ String creditCards[]={ "SBI creditcard", "axis", "flipkart axis",
 "karnataka bank", "maharastra bank"};
 
 System.out.println("list of Credit card names:");
-
-
-
-}
-
-    getCreditCards(){
 		for(int i=0;i<creditCards.length ; i++){
 System.out.println(creditCards[i]);
 }
-	}
-
+}
 }

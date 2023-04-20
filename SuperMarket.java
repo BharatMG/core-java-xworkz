@@ -10,7 +10,5 @@ System.out.println("list of grocery names:");
 for(int i=0;i<groceries.length ; i++){
 System.out.println(groceries[i]);
 }
-
 }
-
 }

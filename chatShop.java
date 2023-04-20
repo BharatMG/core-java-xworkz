@@ -10,7 +10,5 @@ System.out.println("list of chats names:");
 for(int i=0;i<chatsName.length ; i++){
 System.out.println(chatsName[i]);
 }
-
 }
-
 }

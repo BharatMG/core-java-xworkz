@@ -10,7 +10,5 @@ System.out.println("list of Soap names:");
 for(int i=0;i<brands.length ; i++){
 System.out.println(brands[i]);
 }
-
 }
-
 }

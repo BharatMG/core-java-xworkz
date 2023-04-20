@@ -11,7 +11,5 @@ System.out.println("list of MNC compaines names:");
 for(int i=0;i<mncCompanies.length ; i++){
 System.out.println(mncCompanies[i]);
 }
-
 }
-
 }

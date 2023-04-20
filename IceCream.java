@@ -10,7 +10,5 @@ System.out.println("list of ice cream names:");
 for(int i=0;i<iceCreams.length ; i++){
 System.out.println(iceCreams[i]);
 }
-
 }
-
 }

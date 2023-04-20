@@ -9,7 +9,5 @@ System.out.println("tourist places:"+ tourist.length);
 for(int i=0; i<tourist.length; i++){
 System.out.println(tourist[i]);
 }
-
 }
-
 }

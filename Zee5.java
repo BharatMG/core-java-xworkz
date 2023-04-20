@@ -10,7 +10,5 @@ System.out.println("list of Movie names:"+ videos.length);
 for(int i=0;i<videos.length ; i++){
 System.out.println(videos[i]);
 }
-
 }
-
 }

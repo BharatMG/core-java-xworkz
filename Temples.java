@@ -10,7 +10,5 @@ System.out.println("list of God names:");
 for(int i=0;i<god.length ; i++){
 System.out.println(god[i]);
 }
-
 }
-
 }
