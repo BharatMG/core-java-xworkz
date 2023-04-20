@@ -13,5 +13,19 @@ System.out.println(" strap color is "+ strapColor);
 System.out.println("Water Resistance Depth is "+ waterResistanceDepth);
 System.out.println("warrenty Period is "+ warrentyPeriod);
 System.out.println(" price is "+ price);
+System.out.println("re initializing of the above static variable");
+
+brandName = "fossil";
+series = "Everett";
+strapColor = "silver";
+waterResistanceDepth = 50;
+price = 9446 ;
+
+System.out.println("analog watch brand name "+ brandName);
+System.out.println("series "+ series);
+System.out.println(" strap color is "+ strapColor);
+System.out.println("Water Resistance Depth is "+ waterResistanceDepth);
+System.out.println("warrenty Period is "+ warrentyPeriod);
+System.out.println(" price is "+ price);
 }
 }

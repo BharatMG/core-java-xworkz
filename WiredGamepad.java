@@ -14,7 +14,7 @@ System.out.println("sales package is "+ salesPackage );
 System.out.println("price is "+ price);
 System.out.println("RE INITIALIZE THE ABOVE STATIC VARIABLES");
 
-brandName = "F FERONS ";
+brandName = "F-FERONS ";
 connectivity = "bluetooth";
 operatingRange = "10 m";
 salesPackage = "1 BLUETOOTH SPEAKER, 1 CHARGING CABLE";

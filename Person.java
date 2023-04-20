@@ -1,20 +1,40 @@
 class Person{
-static String personName = "bharat";
-static int age = 28;
-static long phoneNumber = 8553366463l;
-static boolean isAlive = true;
-static String officialAddress = "rajaji nagar";
-static String permanentAddress = "haveri";
-static String currentAddress = "yelhanka";
-static String dateOfBirth = "05/03/1995";
-static String gender = "male";
-static String qualification = "BE";
-static String height = "167 m";
-static String weight = "60";
-static long aadharNumber = 191234562789l;
-static String panNumber = "DPEPG6890G";
-static String emailID = "bharatmg12@gmail.com";
+static String personName ;
+static int age;
+static long phoneNumber;
+static boolean isAlive;
+static String officialAddress ;
+static String permanentAddress;
+static String currentAddress ;
+static String dateOfBirth ;
+static char gender;
+static String qualification;
+static String height;
+static String weight;
+static long aadharNumber;
+static String panNumber;
+static String emailID ;
+
+
+
+
 public static void main(String persion[]){
+personName = "bharat";
+age = 28;
+phoneNumber = 8553366463l;
+isAlive = true;
+officialAddress = "rajaji nagar";
+permanentAddress = "haveri";
+currentAddress = "yelhanka";
+dateOfBirth = "05/03/1995";
+gender = 'M';
+qualification = "BE";
+height = "167 m";
+weight = "60 kg";
+aadharNumber = 123456780987l;
+panNumber = "dpepg6890g";
+emailID = "bharatmg12@gmail.com";	
+	
 System.out.println("persion name is "+ personName);
 System.out.println(" age is "+ age);
 System.out.println(" phone number is "+ phoneNumber);

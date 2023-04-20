@@ -1,4 +1,4 @@
-class AnkleLengthBootsStatic {
+class AnkleLengthBoots{
 static String brandName = "rkss shoes";
 static String outerMaterial = "denim";
 static String innerMaterial = "cushion";
