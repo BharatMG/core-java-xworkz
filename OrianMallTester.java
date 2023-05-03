@@ -20,6 +20,8 @@ OrianMall.addBrands("West side");
 OrianMall.getBrandNames();
 OrianMall.updateBrandName("West side", "Funky Monkeys play store");
 OrianMall.getBrandNames();
+	String isBrandName=OrianMall.getBrandName("imagine");
+	System.out.println("the searching brand is "+isBrandName );
 	System.out.println("Main method Ended");
 }
 }

@@ -1,4 +1,4 @@
-class Theatre{
+class Theatre1{
 static String movieNames[]={null,null,null,null,null,null,
 null,null,null,null};
 static int index;
@@ -6,23 +6,24 @@ static int index;
 public static boolean AddMovies(String movieName){
 System.out.println("movie name method started");
 boolean isAdded= false;
-if(movieName != null){
+if(movieName != null && index<movieNames.length){
 	movieNames[index++]=movieName;
 	isAdded= true;
 }
-else{	System.out.println("name is invalid");
+else{
+	System.out.println("out of limit");
 }	
-System.out.println("movie name method started");
+System.out.println("movie name method Ended");
 return isAdded;	
 }
 public static void getMovieNames(){
 	System.out.println("get movieName method Started");
 	System.out.println("List of movie names are :");
 	for(int i=0;i<movieNames.length; i++){
-		System.out.println(movieNames[i]);
-}
-	System.out.println("get movieName method Ended");
+	System.out.println(movieNames[i]);
 	}
+	System.out.println("get movieName method Ended");
+}
 public static boolean updatedMovieName(String oldMovieName, String newMovieName){
 	System.out.println("updated MovieName method started");
 	boolean isUpdated = false;
@@ -34,5 +35,15 @@ public static boolean updatedMovieName(String oldMovieName, String newMovieName)
 	}
 	System.out.println("updated MovieName method ended");
 	return isUpdated;
+}
+public static String getMovieName(String movieName){
+	for(int i=0;i<movieNames.length; i++){
+		if(movieNames[i].equals(movieName)){
+		System.out.println(movieNames[i]);
+	return movieNames[i];
+	}
+	}
+	System.out.println("get movieName method Ended");
+	return "no movie is available";
 }
 }

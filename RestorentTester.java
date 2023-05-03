@@ -19,6 +19,8 @@ public static void main(String[] food){
 		Restorent.getItems();
 		Restorent.updateItems("poori","upma");
 		Restorent.getItems();
+		String isAvailable=Restorent.getItem("fried rice");
+		System.out.println("the food is "+isAvailable);
 		System.out.println("main method ended");
 	}
 }

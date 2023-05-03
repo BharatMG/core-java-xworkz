@@ -6,7 +6,7 @@ static int index;
 public static boolean addBrands(String brandName){
 	System.out.println("add brand name method started ");
 	boolean isAdded= false;
-		if(brandName!=null){
+		if(brandName!=null && index<orianMallBrandNames.length){
 			orianMallBrandNames[index++]=brandName;
 			isAdded=true;
 	}
@@ -34,4 +34,12 @@ public static boolean updateBrandName(String oldBrandNames, String updatedBrandN
 	System.out.println("update brand method ended");
 	return isUpdated;
 }	
+public static String getBrandName(String brandName){
+	for(int i=0;i<orianMallBrandNames.length;i++){
+	if(orianMallBrandNames[i].equals(brandName)){
+	return orianMallBrandNames[i];
+	}
+}
+	return "no brand Name found";
+	}
 }

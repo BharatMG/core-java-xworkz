@@ -5,7 +5,7 @@ class Restorent{
 public static boolean addItems(String foodName){
 		System.out.println("add items method started ");
 		boolean isAdded=false;
-		if(menu!=null){
+		if(menu!=null && index<menu.length){
 			menu[index++]=foodName;
 			isAdded=true;
 			System.out.println("food name is found"+foodName);
@@ -33,4 +33,12 @@ public static boolean updateItems(String oldFoodName,String updateFoodName){
 		System.out.println("----update food name method ended----");
 		return isUpdate;
 }
+public static String getItem(String ItemName){
+	for(int i=0;i<menu.length;i++){
+	if(menu[i].equals(ItemName)){
+	return menu[i];
+	}
+}
+	return "no food Name found";
+	}
 }

@@ -20,6 +20,8 @@ Library.addLibraryBooks("pride of prejudice");
 Library.getLibraryBooks();
 Library.updateLibraryBooks("three men in boat" , "ponniyin selvan");
 Library.getLibraryBooks();
+	String isPresent =Library.getBookName("the richest man");
+		System.out.println("search book :"+isPresent);
 	System.out.println("main method Ended");
 }
 }

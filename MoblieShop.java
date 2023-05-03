@@ -4,7 +4,7 @@ static int index;
 public static boolean AddMobile(String mobileName){
 System.out.println("add mobile names Started");
  boolean isAdded = false;
- if(mobileName!=null){
+ if(mobileName!=null && index<mobileNames.length){
 	 mobileNames[index++]=mobileName;
 	 isAdded= true;
 }
@@ -32,5 +32,13 @@ public static boolean updatedMobilName(String oldMobileName,String newMobileName
 	}
 		System.out.println("updated movie name method ended ");
 		return isUpdated;
+	}
+public static String getMobileName(String mobileName){
+	for(int i=0;i<mobileNames.length;i++){
+	if(mobileNames[i].equals(mobileName)){
+	return mobileNames[i];
+	}
+}
+	return "no mobile Name found";
 	}
 }
