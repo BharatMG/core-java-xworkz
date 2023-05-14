@@ -1,15 +1,15 @@
-class Watch
+class Specs
 {
 	String brandName;
 	String color;
-	double price;
 	String type;
+	double price;
 	
-	public Watch(String brandName,String color,double price,String type)
+	public Specs(String brandName,String color,String type,double price)
 	{
 		this.brandName=brandName;
 		this.color=color;
-		this.price=price;
 		this.type=type;
-	}
+		this.price=price;
+	}	
 }

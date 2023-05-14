@@ -1,167 +1,73 @@
 class WatchTester{
-	public static void main(String [] tt){
-		//type referece=new keyword constructor
-		Watch time=new Watch();
-		time.type="analog";
-		time.brandName="titan";
-		time.price=2565.56;
-		time.color="silver";
-		time.giveTime();
-		System.out.println("Type:"+time.type+" Brand Name:"+time.brandName+" Price:"+
-		time.price+" Colour:"+time.color);
-		
-		Watch time1=new Watch();
-		time1.type="Digital";
-		time1.brandName="G-Shock";
-		time1.price=5565.56;
-		time1.color="White";
-		time1.giveTime();
-		System.out.println("Type:"+time1.type+" Brand Name:"+time1.brandName+" Price:"+ 
-		time1.price+" Colour:"+time1.color);
-		
-		Watch time2=new Watch();
-		time2.type="analog";
-		time2.brandName="HMT";
-		time2.price=2565.56;
-		time2.color="Blue";
-		time2.giveTime();
-		System.out.println("Type="+time2.type+"Brand Name="+time2.brandName+"Price="+time2.price+"Colour"+time2.color);
-		
-		Watch time3=new Watch();
-		time3.type="Digital";
-		time3.brandName="Rolex";
-		time3.price=65565.56;
-		time3.color="Green";
-		time3.giveTime();
-		System.out.println("Type="+time3.type+"Brand Name="+time3.brandName+"Price="+time3.price+"Colour"+time3.color);
-		
-		Watch time4=new Watch();
-		time4.type="analog";
-		time4.brandName="Fastrack";
-		time4.price=5565.56;
-		time4.color="Black";
-		time4.giveTime();
-		System.out.println("Type="+time4.type+"Brand Name="+time4.brandName+"Price="+time4.price+"Colour"+time4.color);
-		
-		Watch time5=new Watch();
-		time5.type="analog";
-		time5.brandName="Tissot";
-		time5.price=5865.56;
-		time5.color="Dimond";
-		time5.giveTime();
-		System.out.println("Type="+time5.type+"Brand Name="+time5.brandName+"Price="+time5.price+"Colour"+time5.color);
-		
-		Watch time6=new Watch();
-		time6.type="Digital";
-		time6.brandName="noice";
-		time6.price=2865.56;
-		time6.color="Brown";
-		time6.giveTime();
-		System.out.println("Type="+time6.type+"Brand Name="+time6.brandName+"Price="+time6.price+"Colour"+time6.color);
-		
-		Watch time7=new Watch();
-		time7.type="digital";
-		time7.brandName="apple";
-		time7.price=25565.56;
-		time7.color="black";
-		time7.giveTime();
-		System.out.println("Type="+time7.type+"Brand Name="+time7.brandName+"Price="+time7.price+"Colour"+time7.color);
-		
-		Watch time8=new Watch();
-		time8.type="analog";
-		time8.brandName="fozil";
-		time8.price=2565.56;
-		time8.color="greay";
-		time8.giveTime();
-		System.out.println("Type="+time8.type+"Brand Name="+time8.brandName+"Price="+time8.price+"Colour"+time8.color);
-		
-		Watch time9=new Watch();
-		time9.type="analog";
-		time9.brandName="Diseal";
-		time9.price=2565.56;
-		time9.color="Brown";
-		time9.giveTime();
-		System.out.println("Type="+time9.type+"Brand Name="+time9.brandName+"Price="+time9.price+"Colour"+time9.color);
-		
-		Watch time10=new Watch();
-		time10.type="analog";
-		time10.brandName="titan";
-		time10.price=2565.56;
-		time10.color="silver";
-		time10.giveTime();
-		System.out.println("Type="+time10.type+"Brand Name="+time10.brandName+"Price="+time10.price+"Colour"+time10.color);
-		
-		Watch time11=new Watch();
-		time11.type="analog";
-		time11.brandName="Omega";
-		time11.price=2565.56;
-		time11.color="Dark Brown";
-		time11.giveTime();
-		System.out.println("Type="+time11.type+"Brand Name="+time11.brandName+"Price="+time11.price+"Colour"+time11.color);
-		
-		Watch time12=new Watch();
-		time12.type="analog";
-		time12.brandName="titan";
-		time12.price=2565.56;
-		time12.color="Green Camoflage";
-		time12.giveTime();
-		System.out.println("Type="+time12.type+"Brand Name="+time12.brandName+"Price="+time12.price+"Colour"+time12.color);
-		
-		Watch time13=new Watch();
-		time13.type="analog";
-		time13.brandName="Cartier";
-		time13.price=2565.56;
-		time13.color="red";
-		time13.giveTime();
-		System.out.println("Type="+time13.type+"Brand Name="+time13.brandName+"Price="+time13.price+"Colour"+time13.color);
-		
-		Watch time15=new Watch();
-		time15.type="Digital";
-		time15.brandName="Zoop";
-		time15.price=2565.56;
-		time15.color="Orange";
-		time15.giveTime();
-		System.out.println("Type="+time15.type+"Brand Name="+time15.brandName+"Price="+time15.price+"Colour"+time15.color);
-		
-		Watch time17=new Watch();
-		time17.type="analog";
-		time17.brandName="IWC";
-		time17.price=2565.56;
-		time17.color="Black";
-		time17.giveTime();
-		System.out.println("Type="+time17.type+"Brand Name="+time17.brandName+"Price="+time17.price+"Colour"+time17.color);
-		
-		Watch time19=new Watch();
-		time19.type="analog";
-		time19.brandName="titan";
-		time19.price=2565.56;
-		time19.color="silver";
-		time19.giveTime();
-		System.out.println("Type="+time19.type+"Brand Name="+time19.brandName+"Price="+time19.price+"Colour"+time19.color);
-		
-		Watch time21=new Watch();
-		time21.type="analog";
-		time21.brandName="titan";
-		time21.price=2565.56;
-		time21.color="silver";
-		time21.giveTime();
-		System.out.println("Type="+time21.type+"Brand Name="+time21.brandName+"Price="+time21.price+"Colour"+time21.color);
-		
-		Watch time23=new Watch();
-		time23.type="analog";
-		time23.brandName="Seiko";
-		time23.price=255565.56;
-		time23.color="silver";
-		time23.giveTime();
-		System.out.println("Type="+time23.type+"Brand Name="+time23.brandName+"Price="+time23.price+"Colour"+time23.color);
-		
-		Watch time24=new Watch();
-		time24.type="analog";
-		time24.brandName="titan";
-		time24.price=2565.56;
-		time24.color="silver";
-		time24.giveTime();
-		System.out.println("Type="+time24.type+"Brand Name="+time24.brandName+"Price="+time24.price+"Colour"+time24.color);
-	}
 	
+	public static void main(String []w){
+	
+	Watch time=new Watch("Titan","Greay",2000.00,"Analog");
+	System.out.println("Name="+time.brandName+" Colour="+time.color+" Price Rs="+time.price+" Type="+time.type);
+		
+	Watch time2=new Watch("Faststrak","White",2568.65,"Degital");
+	System.out.println("Name="+time2.brandName+" Colour="+time2.color+" Price Rs="+time2.price+" Type="+time2.type);
+		
+		
+	Watch time3=new Watch("Foosil","Shining Black",6565.56,"Analog");
+	System.out.println("Name="+time3.brandName+" Colour="+time3.color+" Price Rs="+time3.price+" Type="+time3.type);
+		
+		
+	Watch time4=new Watch("Police","Dark Green",103456.96,"Analog");
+	System.out.println("Name="+time4.brandName+" Colour="+time4.color+" Price Rs="+time4.price+" Type="+time4.type);
+		
+		
+	Watch time5=new Watch("G-Shok","White",5231.95,"Digital");
+	System.out.println("Name="+time5.brandName+" Colour="+time5.color+" Price Rs="+time5.price+" Type="+time5.type);
+		
+	Watch time6=new Watch("Deseal","Mat Black",5681.65,"Analog");
+	System.out.println("Name="+time6.brandName+" Colour="+time6.color+" Price Rs="+time6.price+" Type="+time6.type);
+			
+	Watch time7=new Watch("Citizan","Gold",26556.05,"Analog");
+	System.out.println("Name="+time7.brandName+" Colour="+time7.color+" Price Rs="+time7.price+" Type="+time7.type);
+		
+		
+	Watch time8=new Watch("Lifelong","Blue",76865.66,"Analog");
+	System.out.println("Name="+time8.brandName+"\nColour="+time8.color+"\nPrice Rs="+time8.price+"\nType="+time8.type);
+		
+		
+	Watch time9=new Watch("Mazarati","Maroun",76546.80,"Analog");
+	System.out.println("Name="+time9.brandName+"\nColour="+time9.color+"\nPrice Rs="+time9.price+"\nType="+time9.type);
+		
+		
+	Watch time10=new Watch("Timex","Pitch Black",8868.00,"Analog");
+	System.out.println("Name="+time10.brandName+"\nColour="+time10.color+"\nPrice Rs="+time10.price+"\nType="+time10.type);
+		
+		
+	Watch time11=new Watch("Sonamta","Greay",2050.00,"Degital");
+	System.out.println("Name="+time11.brandName+"\nColour="+time11.color+"\nPrice Rs="+time11.price+"\nType="+time11.type);
+			
+	Watch time12=new Watch("Alexender Crieste","Silver",88676.00,"Analog");
+	System.out.println("Name="+time12.brandName+"\nColour="+time12.color+"\nPrice Rs="+time12.price+"\nType="+time12.type);
+		
+		
+	Watch time13=new Watch("Casio","Green",5624.00,"Analog");
+	System.out.println("Name="+time13.brandName+"\nColour="+time13.color+"\nPrice Rs="+time13.price+"\nType="+time13.type);
+			
+	Watch time14=new Watch("Maxmind","black",8658.00,"Analog");
+	System.out.println("Name="+time14.brandName+"\nColour="+time14.color+"\nPrice Rs="+time14.price+"\nType="+time14.type);
+			
+	Watch time15=new Watch("Tissot","Yellow",20500.00,"Analog");
+	System.out.println("Name="+time15.brandName+"\nColour="+time15.color+"\nPrice Rs="+time15.price+"\nType="+time15.type);
+				
+	Watch time16=new Watch("Michele Kdrs","Lemon Yellow",21658.00,"Analog");
+	System.out.println("Name="+time16.brandName+"\nColour="+time16.color+"\nPrice Rs="+time16.price+"\nType="+time16.type);
+		
+		
+	Watch time17=new Watch("Guess","Pink",21256.00,"Analog");
+	System.out.println("Name="+time17.brandName+"\nColour="+time17.color+"\nPrice Rs="+time17.price+"\nType="+time17.type);
+		
+		
+	Watch time18=new Watch("Addidas","Orange",26884.00,"Analog");
+	System.out.println("Name="+time18.brandName+"\nColour="+time18.color+"\nPrice Rs="+time18.price+"\nType="+time18.type);
+		
+		
+	Watch time19=new Watch("EarnShaw","Purple",2642.00,"Analog");
+	System.out.println("Name="+time19.brandName+"\nColour="+time19.color+"\nPrice Rs="+time19.price+"\nType="+time19.type);
+}
 }
