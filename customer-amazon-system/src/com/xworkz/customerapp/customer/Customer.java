@@ -17,5 +17,6 @@ public class Customer {
     private String location;
     private long mobileNumber;
     private Gender gender;
+    private String emailId;
     private ModeOfPayment payment;
 }

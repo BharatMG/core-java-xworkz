@@ -17,7 +17,5 @@ public interface Ecommerce {
     String[] getCustomerLocationByName(String name);
     boolean updateCustomerAgeByid(int existingId,int updateAge);
     String getCustomerNameByAge(int age);
-
-
-
+    String getNameByEmailId(String emailId);
 }

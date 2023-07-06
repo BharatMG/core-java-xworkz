@@ -1,5 +1,9 @@
 package com.xworkz.patientapp.apolloImpl;
 
+import com.xworkz.patientapp.exception.DiseaseNameNotFoundException;
+import com.xworkz.patientapp.exception.IdNotFoundException;
+import com.xworkz.patientapp.exception.NameNotFoundException;
+import com.xworkz.patientapp.exception.WardNoNotFoundException;
 import com.xworkz.patientapp.patient.Patient;
 import com.xworkz.patientapp.hospital.Hospital;
 
@@ -8,8 +12,8 @@ import java.sql.SQLOutput;
 public class ApolloImpl implements Hospital {
 
     Patient patient[];
-    int i;
-    int j;
+    int i = 0;
+
 
     public ApolloImpl(int size) {
         patient = new Patient[size];
@@ -19,85 +23,75 @@ public class ApolloImpl implements Hospital {
     public boolean addData(Patient patient) {
         System.out.println("invoked patient method");
         boolean isAdded = false;
-        if (patient != null) {
-            System.out.println("patient check completed..proceed to add patient");
-            if (patient.getName() != null && !patient.getName().isEmpty()) {
-                this.patient[i] = patient;
-                i++;
-                isAdded = true;
-                System.out.println("patient data added...");
+        try {
+            if (patient != null) {
+                System.out.println("patient check completed..proceed to add patient");
+                if (patient.getName() != null && !patient.getName().isEmpty()) {
+                    this.patient[i++] = patient;
+                    isAdded = true;
+                    System.out.println("patient data added...");
+                } else {
+                    System.out.println("no patient data available");
+                }
             } else {
-                System.out.println("no patient data available");
+                System.out.println("not added");
             }
-        } else {
-            System.out.println("not added");
+        } catch (Exception ee) {
+            ee.printStackTrace();
         }
         return isAdded;
     }
-
-    @Override
-    public Patient getPatientByAddress(String address) {
-        System.out.println("comparing address invoked");
-
-        for (int i = 0; i < patient.length; i++) {
-
-            if (patient[i].getAddress().equals(address)) {
-                // this.patient[i] = patient[i];
-                System.out.println(patient[i]);
-                System.out.println("comparing the address value matched");
-            } else {
-                System.out.println("No such data......");
-            }
-        }
-        return null;
-    }
-
     @Override
     public String getPatientNameByWardNo(String wardNo) {
         System.out.println("wardNumber is invoked..");
-        for (int i = 0; i < patient.length; i++) {
-            if (patient[i].getWardNumber().toString().equals(wardNo)) {
-                 //System.out.println(patient[i]);
-                //if (patient[i].getName().equals(wardNo)) {
-                    System.out.println(patient[i].getName());
-                    System.out.println("get the name:....");
+        String s=null;
+            for (int i = 0; i <= patient.length; i++) {
+                if (patient[i].getWardNumber().equals(wardNo)) {
+                    System.out.println(s=patient[i].getName());
+                    System.out.println("...........get the name:....");
                 } else {
-                    System.out.println("NO ward number matched..");
+                    WardNoNotFoundException exception = new WardNoNotFoundException(wardNo);
+                    throw exception;
                 }
             }
-
-        return null;
+        return "s";
     }
 
     @Override
     public String[] getPatientNameByDiseaseName(String diseaseName) {
         System.out.println("get patient name by diseaseName method invoked");
-        for(int i=0;i< patient.length;i++){
-            if(patient[i].getDisease().equals(diseaseName)){
-                System.out.println(patient[i].getName());
-                System.out.println("get the patient name");
+        String[] patientNames = new String[3];
+        try {
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getDisease().equals(diseaseName)) {
+                    System.out.println(patient[i].getName());
+                    System.out.println("....get the patient name....");
+                } else {
+                    DiseaseNameNotFoundException exception=new DiseaseNameNotFoundException(diseaseName);
+                    System.out.println("no such data found...");
+                }
             }
-            else{
-                System.out.println("no such data found...");
-            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return new String[0];
+        return patientNames;
     }
 
     @Override
-    public boolean updatePatientDiseaseByPatientName(String existingPatientName, String updatedDisease){
+    public boolean updatePatientDiseaseByPatientName(String existingPatientName, String updatedDisease) {
         System.out.println("updated patient disease method invoked");
-        boolean isUpdated=false;
-        for(int i=0;i< patient.length;i++){
-            if(patient[i].getName().equals(existingPatientName)){
-                patient[i].setDisease(updatedDisease);
-                System.out.println("enter the updated disease name");
-                isUpdated=true;
-                System.out.println("disease name updated...");
-            }
-            else{
-                System.out.println("No such data available");
-            }
+        boolean isUpdated = false;
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getName().equals(existingPatientName)) {
+                    patient[i].setDisease(updatedDisease);
+                    System.out.println("enter the updated disease name");
+                    isUpdated = true;
+                    System.out.println(".................disease name updated...");
+                } else {
+                    NameNotFoundException exception=new NameNotFoundException(existingPatientName);
+                    throw exception;
+                }
+                    System.out.println("No such data available");
         }
         return isUpdated;
     }
@@ -105,46 +99,81 @@ public class ApolloImpl implements Hospital {
     @Override
     public boolean updatedPatientWardNoByPatientId(int existingId, String updatedWardNumber) {
         System.out.println("update patient wardNumber method invoked");
-    boolean isUpdated=false;
-        for(int i=0;i< patient.length;i++){
-            if(patient[i].getId()==existingId){
-                patient[i].setWardNumber(updatedWardNumber);
-                isUpdated=true;
-                System.out.println("wardNumber is updated....");
+        boolean isUpdated = false;
+        try {
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getId() == existingId) {
+                    patient[i].setWardNumber(updatedWardNumber);
+                    isUpdated = true;
+                    System.out.println(".........wardNumber is updated....");
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return isUpdated;
     }
 
-
-  /*  @Override
-    public boolean updatePatientDiseaseByPatientName(String name, String disease) {
-        System.out.println("update method invoked");
+    @Override
+    public boolean updatedPatientAgeByPatientId(int existingId, int updatedAge) {
+        System.out.println("update patient Age meThod invoked.");
         boolean isUpdated = false;
-        for (int i = 0; i < patient.length; i++) {
-            if (patient[i].getName().compareTo(patient[i].getDisease())) {
-
-
-                if (patient[i].getName().equals(name)) {
-                    System.out.println(patient[i]);
-                    if ()
-                        patient[1].getDisease() = patient[j].getDisease();
+        try {
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getId() == existingId) {
+                    patient[i].setAge(updatedAge);
                     isUpdated = true;
-                    System.out.println("updated disease name");
+                    System.out.println(".............Age is updated....");
                 }
             }
-            return isUpdated;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-*/
+        return isUpdated;
+    }
 
-        @Override
-        public void getAllData() {
-            System.out.println("invoke getAll details");
-            System.out.println("list of all patient details");
+    @Override
+    public Patient getPatientById(int patientId) {
+        System.out.println("get patient by id method invoked.");
+        Patient pat1=null;
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getId() == patientId) {
+                    System.out.println(pat1=patient[i]);
+                }else {
+                    IdNotFoundException exception=new IdNotFoundException(patientId);
+                    throw exception;
+                }
+        }
+        return pat1;
+    }
+
+    @Override
+    public String getPatientCityByPatientId(int patientId) {
+        try {
+            System.out.println("get patient doorNumber method invoked");
+            for (int i = 0; i < patient.length; i++) {
+                if (patient[i].getId() == patientId) {
+                    System.out.println(patient[i].getAddress().getCountry().getState().getCity());
+
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    @Override
+    public void getAllData() {
+        System.out.println("invoke getAll details");
+        System.out.println("list of all patient details");
+        try {
             for (Patient patient : this.patient) {
                 System.out.println(patient);
             }
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
-
+}

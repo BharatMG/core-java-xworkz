@@ -1,16 +1,16 @@
 package com.xworkz.patientapp.patient;
 
+import com.xworkz.patientapp.address.Address;
 import com.xworkz.patientapp.constant.Gender;
 import com.xworkz.patientapp.constant.IdProof;
 import com.xworkz.patientapp.constant.Insured;
 import lombok.*;
 
-@Setter
-@Getter
+@AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Data
 public class Patient {
+
 
     private int id;
     private String name;
@@ -21,7 +21,7 @@ public class Patient {
     private long mobileNumber;
     private String wardNumber;
     private int bedNumber;
-    private String address;
+    Address address;
     private String disease;
 
 }

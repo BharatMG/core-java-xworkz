@@ -2,6 +2,9 @@ package com.xworkz.customerapp.flipkartImpl;
 
 import com.xworkz.customerapp.customer.Customer;
 import com.xworkz.customerapp.ecomerce.Ecommerce;
+import com.xworkz.customerapp.exception.EmailIdNotFoundException;
+import com.xworkz.customerapp.exception.IdNotFoundException;
+import com.xworkz.customerapp.exception.NameNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -53,54 +56,58 @@ public class FlipkartImpl implements Ecommerce {
     @Override
     public Customer getCustomerByName(String name) {
         System.out.println("get customer by name method invoked");
-        for (int i = 0; i < customer.length; i++) {
-            if (customer[i].getName().equals(name)) {
-                System.out.println(customer[i]);
+        Customer cu = null;
+        for (Customer c : customer) {
+            if (c.getName().equals(name)) {
+                System.out.println(cu = c);
             } else {
-                System.out.println("no such data found...");
+                NameNotFoundException exception=new NameNotFoundException(name);
+                throw exception;
             }
         }
-        return null;
+        return cu;
     }
 
     @Override
     public String getCustomerNameById(int id) {
         System.out.println("get name by id method invoked");
+        String str = null;
         for (Customer c : customer) {
             if (c.getId() == id) {
                 this.customer = customer;
-                System.out.println(c.getName());
+                System.out.println(str = c.getName());
+            }else {
+                IdNotFoundException exception=new IdNotFoundException("id");
+                throw exception;
             }
-
         }
-        return null;
+        return "str";
     }
 
     @Override
-    public boolean updateCustomermobileNumberByAge(int existingAge,long updatedMobileNo) {
+    public boolean updateCustomermobileNumberByAge(int existingAge, long updatedMobileNo) {
         System.out.println("update mobile number method invoked");
-        boolean isUpdate=false;
+        boolean isUpdate = false;
         for (int i = 0; i < customer.length; i++) {
-            if (customer[i].getAge()==existingAge) {
+            if (customer[i].getAge() == existingAge) {
                 customer[i].setMobileNumber(updatedMobileNo);
-                isUpdate=true;
+                isUpdate = true;
                 System.out.println(".........mobileNumber updated....");
-            }else{
+            } else {
                 System.out.println("no update available");
             }
-
         }
         return isUpdate;
     }
 
     @Override
     public String[] getCustomerLocationByName(String name) {
-        String[] str=new String[3];
+        String[] str = new String[3];
         System.out.println("get location by name method started");
-        for(int i=0;i< customer.length;i++){
-            if(customer[i].getName().equals(name)){
+        for (int i = 0; i < customer.length; i++) {
+            if (customer[i].getName().equals(name)) {
                 System.out.println(customer[i].getLocation());
-            }else{
+            } else {
                 System.out.println("no such data available");
             }
         }
@@ -110,13 +117,13 @@ public class FlipkartImpl implements Ecommerce {
     @Override
     public boolean updateCustomerAgeByid(int existingId, int updateAge) {
         System.out.println("update age by id method started");
-        boolean isAdded=false;
-        for (Customer cc:customer) {
-            if(cc.getId()==existingId){
+        boolean isAdded = false;
+        for (Customer cc : customer) {
+            if (cc.getId() == existingId) {
                 cc.setAge(updateAge);
-                isAdded=true;
+                isAdded = true;
                 System.out.println(".....updated the age.....");
-            }else{
+            } else {
                 System.out.println("NO UPDATE AVALIABLE");
             }
         }
@@ -126,13 +133,29 @@ public class FlipkartImpl implements Ecommerce {
     @Override
     public String getCustomerNameByAge(int age) {
         System.out.println("get Name by age method invoked");
-        for (Customer C4:customer) {
-            if(C4.getAge()==age){
-                System.out.println(C4.getName());
-            }else{
-                System.out.println("no such data availble");
+        String st = null;
+        for (Customer C4 : customer) {
+            if (C4.getAge() == age) {
+                System.out.println(st = C4.getName());
+            } else {
+                System.out.println("no such data available");
             }
         }
-        return null;
+        return "st";
+    }
+
+    @Override
+    public String getNameByEmailId(String emailId) {
+        System.out.println("get name by emailId method invoked");
+        String s = null;
+        for (Customer c1 : customer) {
+            if (c1.getEmailId().equals(emailId)) {
+                System.out.println(s = c1.getName());
+            }else{
+                EmailIdNotFoundException exception=new EmailIdNotFoundException(emailId);
+                throw exception;
+            }
+        }
+        return "s";
     }
 }
