@@ -17,8 +17,7 @@ import javax.naming.NameAlreadyBoundException;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-//@NoArgsConstructor
-//@AllArgsConstructor
+
 public class PatientTester {
 
     public static void main(String[] args) {
